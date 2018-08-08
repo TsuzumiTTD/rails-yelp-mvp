@@ -1,0 +1,19 @@
+<%= simple_form_for [@restaurant] do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :category %>
+    <%= f.select :category, [['Chinese', 'chinese'],['Italian', 'Italian'], ['Japanese', 'japanese'], ['French', 'french'], ['Belgian', 'belgian']], include_blank:false %>
+  </p>
+    <%= f.submit %>
+<% end %>
+
+<%= link_to restaurants_path do %>
+  <i class="fas fa-home"></i>
+<% end %>
